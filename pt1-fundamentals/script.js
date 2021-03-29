@@ -1,12 +1,14 @@
 //////////////////////////////
 //Linking a JavaScript file///
-console.log('//Linking a JavaScript file///');
+console.log(`//Linking a JavaScript file//
+ `);
 let js = 'amazing';
 console.log(40 + 8 + 23 - 10);
 
 //////////////////////////////
 /////Values and Variables/////
-console.log('//Values and Variables//');
+console.log(`//Values and Variables//
+ `);
 console.log('Epulon');
 console.log(50);
 
@@ -31,7 +33,8 @@ let job2 = 'Designer';
 console.log(myFirstJob);
 //////////////////////////////
 //////////Data types//////////
-console.log('//Data types//');
+console.log(`//Data types//
+ `);
 //Number
 let age = 23;
 //String
@@ -65,7 +68,8 @@ console.log(typeof javaScriptIsFun);
 
 //////////////////////////////
 ///////let, const & var///////
-console.log('//let, const & var//');
+console.log(`//let, const & var//
+ `);
 //let - for variable that can be changed in the future (mutable)
 let years = 30;
 console.log(years);
@@ -84,7 +88,8 @@ console.log(someName);
 
 //////////////////////////////
 ///////Basic operators////////
-console.log('//Basic operators//');
+console.log(`//Basic operators//
+ `);
 //Mathematical operators
 const yearOfBirthEpulon = 1985;
 const yearOfBirthBoris = 1997;
@@ -121,7 +126,8 @@ const isFullAge = yearOfBirthEpulon <= 2003;
 
 //////////////////////////////
 /////Operator precedence//////
-console.log('//Operator precedence//');
+console.log(`//Operator precedence//
+ `);
 let now = 2050;
 const ageMirko = now - 1945;
 const ageSlavko = now - 1991;
@@ -134,7 +140,8 @@ console.log(ageMirko, ageSlavko, averageAge);
 
 /////////////////////////////////
 //Strings and template literals//
-console.log('//Strings and template litelars//');
+console.log(`//Strings and template litelars//
+ `);
 const job = 'aspiring web developer';
 const year = 2021;
 const description2 = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '.';
@@ -152,7 +159,8 @@ using template literals`);
 
 /////////////////////////////////
 ///////if/else statements////////
-console.log('//if/else statements//');
+console.log(`//if/else statements//
+ `);
 const driversAge = 15;
 if (driversAge >= 18) {
     console.log('Rudi can start driving');
@@ -171,7 +179,8 @@ console.log(century);
 
 /////////////////////////////////////////
 ///////Type conversion & coercion////////
-console.log('//Type conversion & coercion//');
+console.log(`//Type conversion & coercion//
+ `);
 //type conversion
 const inputYear = '1991';
 console.log(typeof inputYear);
@@ -200,7 +209,8 @@ console.log(`10` - `4` - `3` - 2 + `5`);//subtracting left to right `10`-`4`-`3`
 
 /////////////////////////////////////
 ///////Truthy & Falsy values////////
-console.log('//Truthy & Falsy values//');
+console.log(`//Truthy & Falsy values//
+ `);
 //Falsy: values that are not false but will become false if converted to boolean (0, ``(empty string), undefined,null, NaN)
 console.log(Boolean(0));//zero
 console.log(Boolean(5));//number
@@ -238,7 +248,8 @@ if (height2) {
 
 /////////////////////////////////////
 ////Equality operators: ==VS.===/////
-console.log('//Equality operators: ==VS.===//');
+console.log(`//Equality operators: ==VS.===//
+ `);
 const age1 = 18;
 if (age1 === 18) console.log(`You just became and adult :D`);
 console.log(18 === 18);
@@ -265,8 +276,8 @@ if (favourite !== 23) {
 
 /////////////////////////////////////
 /////////Logical operators///////////
-console.log('//Logical operators//
-');
+console.log(`//Logical operators//
+  `);
 
 const hasDriversLicence = true;
 const hasGoodVision = true;
@@ -292,5 +303,34 @@ if (hasDriversLicence && hasGoodVision && !isTired) {
 
 ////////////////////////////////////////
 /////////The switch statement///////////
-console.log(`//The switch statement
-`);
+console.log(`
+//The switch statement//
+ `);
+
+const day = `monday`;
+switch (day) {
+    case `monday`:
+        console.log(`Do nothing`);
+        console.log(`Just chill`);
+        break;
+    case `tuesday`:
+        console.log(`Rest`);
+        break;
+    case `wednesday`:
+        console.log(`Take a break`);
+        break;
+    case `thursday`:
+        console.log(`Buy groceries`);
+        break;
+    case `thursday`:
+        console.log(`Rest from shopping`);
+        break;
+    case `friday`:
+        console.log(`Wait for the weekend`);
+        break;
+    case `saturday`:
+        console.log(`Finally weekend so I can rest`);
+        break;
+    case `sunday`:
+        console.log(`Dread Monday`)
+}
