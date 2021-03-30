@@ -281,9 +281,9 @@ console.log(`//Logical operators//
 
 const hasDriversLicence = true;
 const hasGoodVision = true;
-console.log(hasDriversLicence && hasGoodVision);
-console.log(hasDriversLicence || hasGoodVision);
-console.log(!hasDriversLicence);
+console.log(hasDriversLicence && hasGoodVision); // && and
+console.log(hasDriversLicence || hasGoodVision); // || or
+console.log(!hasDriversLicence); //! not
 console.log(!hasGoodVision);
 console.log(!hasDriversLicence && !hasGoodVision);
 console.log(hasDriversLicence && !hasGoodVision);
@@ -307,7 +307,7 @@ console.log(`
 //The switch statement//
  `);
 
-const day = `monday`;
+const day = `thursday`;
 switch (day) {
     case `monday`:
         console.log(`Do nothing`);
@@ -320,17 +320,35 @@ switch (day) {
         console.log(`Take a break`);
         break;
     case `thursday`:
-        console.log(`Buy groceries`);
-        break;
-    case `thursday`:
-        console.log(`Rest from shopping`);
+        console.log(`Buy groceries`)
+        console.log(`Rest from shopping`)
         break;
     case `friday`:
         console.log(`Wait for the weekend`);
         break;
     case `saturday`:
-        console.log(`Finally weekend so I can rest`);
-        break;
     case `sunday`:
-        console.log(`Dread Monday`)
+        console.log(`Finally weekend so I can rest`);
+        console.log(`Dread Monday`);
+        break;
+    default:
+        console.log(`Hwat?`)
 }
+//if/else comparison
+if (day === `monday`) {
+    console.log(`Do nothing`);
+    console.log(`Just chill`);
+} else if (day === `tuesday`) {
+    console.log(`Rest`);
+} else if (day === `wednesday`) {
+    console.log(`Take a break`);
+} else if (day === `thursday`) {
+    console.log(`Buy groceries`);
+    console.log(`Rest from shopping`)
+} else if (day === `friday`) {
+    console.log(`Wait for the weekend`);
+} else if (day === `saturday` || day === `sunday`) {
+    console.log(`Finally weekend so I can rest`);
+    console.log(`Dread Monday`);
+} else
+    console.log(`Hwat?`);
