@@ -352,3 +352,34 @@ if (day === `monday`) {
     console.log(`Dread Monday`);
 } else
     console.log(`Hwat?`);
+
+////////////////////////////////////////
+///////Statements & Expressions/////////
+console.log(`
+//Statements & Expressions//
+ `);
+
+console.log(`Not much to say here`);
+
+////////////////////////////////////////
+///The conditional (ternary) operator///
+console.log(`
+//The conditional (ternary) operator//
+ `);
+
+const age2 = 26;
+age2 >= 18 ? console.log(`I'd like to drink beer`) : console.log(`I'd like to drink water`);
+
+const drink = age2 >= 18 ? `wine` : `water`;
+console.log(`I'd like to have ${drink} please.`);
+//If/else for comparison
+let drink2;
+if (age2 >= 18) {
+    drink2 = `wine`;
+} else {
+    drink2 = `water;`
+}
+console.log(drink2);
+
+//Using ternary within template literal
+console.log(`I'd like to drink ${age >= 18 ? `wine` : `water`} please.`);
