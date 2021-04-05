@@ -96,3 +96,19 @@ console.log(fruitProcessor2(2, 3));
 console.log(`
 //Functions review//
  `);
+const calcAge4 = function (curr, birth) {
+    return (Number(curr - birth));
+}
+const yearsUnitlRetirement2 = function (currYear, birthYear, firstName) {
+    const age4 = calcAge4(currYear, birthYear);
+    const retirement2 = 65 - age4;
+
+    if (retirement2 > 0) {
+        return retirement2;
+    } else {
+        return -1;
+    }
+    //return `${firstName} retires in ${retirement2} years.`;
+}
+console.log(yearsUnitlRetirement2(2021, 1955, 'Epulon'));
+console.log(yearsUnitlRetirement2(2021, 1985, 'Branko'));
