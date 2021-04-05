@@ -90,3 +90,9 @@ function fruitProcessor2(apples, oranges) {
 }
 
 console.log(fruitProcessor2(2, 3));
+
+/////////////////////////////////////////
+////////////Functions review/////////////
+console.log(`
+//Functions review//
+ `);
