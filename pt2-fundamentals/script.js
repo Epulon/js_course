@@ -62,9 +62,31 @@ const calcAge3 = birthYear => 2021 - birthYear
 const age3 = calcAge3(1991);
 console.log(age3);
 
-const yearsUntilRetirement = (currYear, birthYear) => {
+const yearsUntilRetirement = (currYear, birthYear, firstName) => {
     const age = (Number(currYear) - Number(birthYear));
     const retirement = (65 - Number(age));
-    return retirement;
+    const name = firstName;
+    return `${firstName} retires in ${retirement} years.`;
 }
-console.log(yearsUntilRetirement(2037, 1991));
+console.log(yearsUntilRetirement(2021, 1981, 'Zizi'));
+console.log(yearsUntilRetirement(2021, 1986, 'Dodo'));
+console.log(yearsUntilRetirement(2021, 2021, 'Zozo'));
+
+/////////////////////////////////////////
+////Functions calling other functions////
+console.log(`
+//Functions calling other functions//
+ `);
+
+function cutFruit(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor2(apples, oranges) {
+    const applePieces = cutFruit(apples);
+    const orangePieces = cutFruit(oranges);
+    const juice2 = `Juice with ${applePieces} apple pieces and ${orangePieces} orange pieces.`;
+    return juice2;
+}
+
+console.log(fruitProcessor2(2, 3));
