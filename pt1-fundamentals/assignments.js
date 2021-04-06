@@ -66,3 +66,43 @@ if (numNeighbours === 1) {
 } else {
     console.log(`No borders`)
 }
+
+//////////////////////////////////
+/////////Logical Operators////////
+const count = (prompt(`What is the name of your country?`));
+const lang = (prompt(`What language is spoken in your country?`));
+const pop = Number(prompt(`What is the population of your country?`));
+const island = (prompt(`Is your country an island?
+(y/n)`));
+if (lang === 'English' || lang === 'english' || lang === 'eng' && pop < 50000000 && island === 'n') {
+    console.log(`Lovely, Sarah should come live in ${count}!`);
+} else {
+    console.log(`Nah, Sarah is very picky, ${count} is not good enough for her sadly.`)
+}
+
+//////////////////////////////////
+///////The switch statement///////
+switch (lang) {
+    case 'mandarin':
+    case 'chinese':
+        console.log('MOST number of native speakers')
+        break;
+    case 'spanish':
+        console.log('2nd most spoken language')
+        break
+    case 'english':
+        console.log('3rd most spoken language')
+        break
+    case 'hindi':
+        console.log('4th most spoken language')
+        break
+    case 'arabic':
+        console.log('5th most spoken language')
+        break
+    default:
+        console.log(`${lang} is an interesting language`)
+}
+
+//////////////////////////////////////
+//The conditional (Ternary) operator//
+console.log(`${count}'s population is ${pop > 33000000 ? 'above' : 'below'} average`);
