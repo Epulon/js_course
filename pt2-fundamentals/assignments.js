@@ -1,3 +1,4 @@
+'use strict';
 /////////////
 //Functions//
 
@@ -25,3 +26,21 @@ console.log(`Spain has ${esp1}% of world population`);
 const percentageOfWorld2 = function (population) {
     return (population / 7900) * 100;
 }
+
+const percentageOfWorld3 = population => (population / 7900) * 100;
+
+const ireland = percentageOfWorld3(4.7);
+const croatia = percentageOfWorld3(4);
+const spain = percentageOfWorld3(47.4);
+console.log(ireland, croatia, spain);
+
+/////////////////////////////////////
+//Functions calling other functions//
+
+function describePopulation(country, population) {
+    const percent = percentageOfWorld1(population)
+    return console.log(`${country} has ${population} million people, which accounts for about ${percent}% of the world's population`)
+}
+describePopulation('Ireland', 4.7);
+describePopulation('Croatia', 4);
+describePopulation('Spain', 47.7);
