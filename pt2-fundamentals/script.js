@@ -112,3 +112,87 @@ const yearsUnitlRetirement2 = function (currYear, birthYear, firstName) {
 }
 console.log(yearsUnitlRetirement2(2021, 1955, 'Epulon'));
 console.log(yearsUnitlRetirement2(2021, 1985, 'Branko'));
+
+/////////////////////////////////////////
+/////////Introduction to arrays//////////
+console.log(`
+//Introduction to Arrays//
+ `);
+
+const friends = ['Michael', 'Stephen', 'Peter'];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2005, 2020);
+console.log(years);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]); //last element in the array
+
+friends[2] = 'Jay'; //change data within Array (only one)
+console.log(friends);
+
+const firstName = 'Epulon';
+const Epulon = [firstName, 'Skutter', 2021 - 1936, 'aspiring web developer', friends];
+console.log(Epulon);
+console.log(Epulon.length);
+
+//Excercise
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+const years2 = [1980, 1967, 2002, 2010, 2018];
+
+console.log(calcAge(years2)); //returns NaN - cant include entire array
+const age5 = calcAge(years2[0]);
+const age6 = calcAge(years2[1]);
+const age7 = calcAge(years2[years2.length - 1]);
+console.log(age5, age6, age7);
+console.log(years2);
+
+const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
+console.log(ages);
+
+/////////////////////////////////////////
+/////////Basic Array operations//////////
+console.log(`
+//Basic Array operations//
+ `);
+
+//Add element to the end of array 'friends'
+friends.push('Branko');
+console.log(friends);
+
+//Add element to the begining of the array
+friends.unshift('Martin');
+console.log(friends);
+
+//Remove last element from array
+friends.pop();
+console.log(friends);
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+//Remove first element from the array
+friends.shift();
+console.log(friends);
+
+//Locate position of element within array
+console.log(friends.indexOf('Stephen'));
+console.log(friends.indexOf('Bob'));
+
+//Check if element is within array
+console.log(friends.includes('Stephen'));
+console.log(friends.includes('Bob'));
+
+friends.push(23);
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('Stephen')) {
+    console.log(`You have a friend called Stephen`);
+} else {
+    console.log(`Its a sad life when you dont know Stephen`)
+}

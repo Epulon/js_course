@@ -1,4 +1,10 @@
 'use strict';
+console.log(`
+        ///////////////
+        //Assignments//
+        ///////////////
+ `)
+
 /////////////
 //Functions//
 
