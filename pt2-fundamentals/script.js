@@ -196,3 +196,43 @@ if (friends.includes('Stephen')) {
 } else {
     console.log(`Its a sad life when you dont know Stephen`)
 }
+
+/////////////////////////////////////////
+/////////Introduction to objects/////////
+console.log(`
+//Introduction to objects//
+ `);
+
+//object litteral syntax
+const epulon = {
+    firstName: 'Epulon',
+    lastName: 'Epulonix',
+    age2: 2021 - (-187),
+    job: 'king',
+    friends: ['Vercingetorix', 'Teuta', 'Boudica', 'Hanibal']
+};
+console.log(epulon);
+
+/////////////////////////////////////////
+/////////Dot vs Bracket notation/////////
+console.log(`
+//Dot vs Bracket notation//
+ `);
+
+//Dot notation
+console.log(epulon.lastName);
+//Bracket notation  
+console.log(epulon['lastName']);
+
+const nameKey = 'Name';
+
+console.log(epulon['first' + nameKey]);
+console.log(epulon['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Epulon? Choose between firstName, lastName, age2, job and friends.')
+console.log(epulon.interestedIn); //dot notation returns undefined because there is no property nemed interestedIn
+if (epulon[interestedIn]) {
+    console.log(epulon[interestedIn]);
+} else {
+    console.log('')
+}
