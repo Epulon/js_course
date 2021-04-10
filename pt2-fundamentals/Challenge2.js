@@ -1,7 +1,9 @@
 'use strict';
 ////////////////
 //Challenge #2//
-
+console.log(` 
+//Challenge #2//
+ `)
 const calcTip = function (bill) {
     if (bill >= 50 && bill <= 300) {
         return (bill * 0.15);

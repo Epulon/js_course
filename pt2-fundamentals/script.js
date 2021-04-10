@@ -231,8 +231,82 @@ console.log(epulon['last' + nameKey]);
 
 const interestedIn = prompt('What do you want to know about Epulon? Choose between firstName, lastName, age2, job and friends.')
 console.log(epulon.interestedIn); //dot notation returns undefined because there is no property nemed interestedIn
-if (epulon[interestedIn]) {
+if (epulon[interestedIn]) { //if value is true (existsin objectcode is executed)
     console.log(epulon[interestedIn]);
 } else {
-    console.log('')
+    console.log('Invalid value. Choose between firstName, lastName, age2, job and friends.');
+}
+
+//Adding new properties
+//Dot notation
+epulon.location = 'Dublin';
+//Bracket notation
+epulon['mastodon'] = '@epulon@noc.social';
+console.log(epulon);
+
+//Challenge
+console.log(`${epulon['firstName']} has ${epulon.friends.length} friends, and his best friend is called ${epulon.friends[1]}`);
+
+/////////////////////////////////////////
+/////////////Object Methods//////////////
+console.log(`
+//Object Methods//
+ `);
+
+const mcnenno = {
+    firstName: 'Epulon',
+    lastName: 'McNenno',
+    birthYear1: 1980,
+    job: 'designer',
+    friends: ['Matija', 'Kristijan', 'Martina', 'Vanja'],
+    driversLicence: true,
+    //Requires manual birthyear input instead of caling it from the object
+    //calcAge5: function (birthYear1) {
+    //    return 2021 - birthYear1;
+    //}
+
+    //Computes age every time is called, in case of heavier calculations that my take some time
+    //calcAge5: function () {
+    //    return 2021 - this.birthYear1;
+    //}
+
+    //Computes the age once and stores it as a new property in the current object
+
+    calcAge6: function () {
+        this.agex = 2021 - this.birthYear1;
+        return this.agex;
+    },
+    summary: function () {
+        return `${this.firstName} is a ${this.calcAge6()} years old ${this.job} and he ${this.driversLicence ? 'has' : "doesn't have"} a drivers licence.`;
+    }
+}
+console.log(mcnenno);
+console.log(mcnenno.agex)
+mcnenno.calcAge6();//property needs to be calculated before we can call it
+console.log(mcnenno.agex);
+console.log(mcnenno);
+
+//Challenge summary
+console.log(mcnenno.summary());
+
+/////////////////////////////////////////
+/////////Iteration: The For Loop/////////
+console.log(`
+//Iteration: The For Loop//
+ `);
+
+//Manual repetion
+//console.log(`Lifting weights repetition 1`);
+//console.log(`Lifting weights repetition 2`);
+//console.log(`Lifting weights repetition 3`);
+//console.log(`Lifting weights repetition 4`);
+//console.log(`Lifting weights repetition 5`);
+//console.log(`Lifting weights repetition 6`);
+//console.log(`Lifting weights repetition 7`);
+//console.log(`Lifting weights repetition 8`);
+//console.log(`Lifting weights repetition 9`);
+//console.log(`Lifting weights repetition 10`);
+//loop counter
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
 }

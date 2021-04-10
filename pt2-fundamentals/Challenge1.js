@@ -1,6 +1,9 @@
 'use strict';
 ////////////////
 //Challenge #1//
+console.log(` 
+//Challenge #1//
+ `)
 const calcAverage = (d1, d2, d3) => (d1 + d2 + d3) / 3;
 
 function checkWinner(a, b, c, d, e, f,) {
