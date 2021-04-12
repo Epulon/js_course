@@ -310,3 +310,100 @@ console.log(`
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
 }
+
+///////////////////////////////////////////
+//Looping Arrays, Breaking and Continuing//
+console.log(`
+//Looping Arrays, Breakign and Continuing//
+ `);
+
+const epulonArray = [
+    'Epulon',
+    'Epulonix',
+    2021 - (-187),
+    'king',
+    ['Vercingetorix', 'Teuta', 'Boudica', 'Hanibal'],
+    'Ugo'
+];
+console.log(epulonArray);
+
+const types = [];
+
+for (let i = 0; i < epulonArray.length; i++) {
+    //Reading from epulonArray array
+    console.log(epulonArray[i], typeof epulonArray[i])
+    //filling types array
+    //types[i] = typeof epulonArray[i];
+    types.push(typeof epulonArray[i]);
+}
+
+console.log(types);
+
+const years1 = [1991, 2007, 1969, 2020];
+const ages1 = [];
+
+for (let i = 0; i < years1.length; i++) {
+    ages1.push(2021 - years1[i]);
+}
+
+console.log(ages1);
+
+//Continue and break statements
+console.log(` 
+//Continue & Break//
+ `)
+//Continue-exit current iteration of the loop and proceed to the next one.
+//Break-competely terminate whole loop
+console.log('---continue---')
+for (let i = 0; i < epulonArray.length; i++) {
+    if (typeof epulonArray[i] !== 'string') continue;
+
+    console.log(epulonArray[i], typeof epulonArray[i])
+}
+
+console.log('---break---');
+for (let i = 0; i < epulonArray.length; i++) {
+    if (typeof epulonArray[i] === "number") break;
+
+    console.log(epulonArray[i], typeof epulonArray[i])
+}
+
+///////////////////////////////////////////
+////Looping backwards and loops in loops///
+console.log(`
+//Looping backwards and loops in loops//
+ `);
+
+console.log('//Looping backwards//');
+
+for (let i = epulonArray.length - 1; i >= 0; i--) {
+    console.log(i, epulonArray[i]);
+}
+console.log('//Loops in loops//');
+
+for (let excercise = 1; excercise < 4; excercise++) {
+    console.log(`------ Starting Excercise ${excercise}`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Excercise ${excercise} lifting weights repetition ${rep}`)
+    }
+}
+
+///////////////////////////////////////////
+////The While Loop///
+console.log(`
+//The While Loop//
+ `);
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetiton ${rep}.`);
+    rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+if (dice === 6) console.log('Wow, 6 on first try!')
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`Congrats, you rolled a 6!!`);
+}
