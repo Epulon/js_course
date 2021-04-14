@@ -21,5 +21,14 @@ for (let i = 0; i < bills1.length; i++) {
     tips1.push(calcTips(bills1[i]));
     totals1.push(bills1[i] + tips1[i]);
 }
-
 console.log(bills1, tips1, totals1);
+
+const calcAvg = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        //sum = sum + arr[];
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAvg(totals1));
