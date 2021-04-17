@@ -6,7 +6,70 @@ const x = '23';
 //Code snippets
 const calcAge = birthYear => 2039 - birthYear;
 console.log('Hello World!');
-console.log(calcAge(1991));
+console.log(calcAge(1981));
 console.log(calcAge(1985));
 console.log(calcAge(1986));
 console.log(calcAge(2021));
+
+//Problem:
+//Given an array of temperatures of one day, calculate the temperature amplitude. Sometimes there can be an sensor error.
+
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+//Amplitude = highTemp-lowTemp
+//Ignore error
+
+//Breaking down:
+//-Ignore Errors
+//-Find max value in array
+//-Find min value in array
+//-Subtract min value from max and return it
+
+//const calcTempAmplitude = function (temp) {
+//    const max = Math.max(...temp);
+//    const min = Math.min(...temp);
+//    for (let i=0; i< temp.length; i++) {
+//    const amp = (max - min);
+//    return amp;
+//    }
+//}; 
+//console.log(`Max temperature: ${Math.max(...temperatures)}`);
+//console.log(`Min temperature: ${Math.min(...temperatures)}`);
+//console.log(`Temperature amplitude: ${calcTempAmplitude(temperatures)}`);
+
+const calcTempAmplitude = function (temp) {
+    
+    let max = temp[0];
+    let min = temp[0];
+
+    for (let i = 0; i < temp.length; i++) {
+        if (typeof temp[i] !== 'number') continue; //skip rest of function if type is not a number
+        if (temp[i] > max) max = temp[i];
+        if (temp[i] < min) min = temp[i];
+    }
+    const amplitude = max-min;
+    console.log(`Maximum temperature = ${max};
+Minimum temperature = ${min};
+Temperature ampitude = ${amplitude};`);
+};
+calcTempAmplitude(temperatures);
+
+//Bonus - Function has two arrays
+const temperaturesNew = [18,-27,13,1,48];
+const temperaturesMerged = temperatures.concat(temperaturesNew);
+const calcTempAmplitudeNew = function (temp) {
+    
+    let max = temp[0];
+    let min = temp[0];
+
+    for (let i = 0; i < temp.length; i++) {
+        if (typeof temp[i] !== 'number') continue; //skip rest of function if type is not a number
+        if (temp[i] > max) max = temp[i];
+        if (temp[i] < min) min = temp[i];
+    }
+    const amplitude = max-min;
+    console.log(`Maximum temperature = ${max};
+Minimum temperature = ${min};
+Temperature ampitude = ${amplitude};`);
+};
+calcTempAmplitudeNew(temperaturesMerged);
