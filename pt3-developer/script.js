@@ -73,3 +73,43 @@ Minimum temperature = ${min};
 Temperature ampitude = ${amplitude};`);
 };
 calcTempAmplitudeNew(temperaturesMerged);
+
+//Debugging
+//Console
+const measureKelvin = function () {
+    const measurement = {
+        type: 'temp',
+        unit: 'celsius',
+        // 3/ Fix
+        value: Number(prompt('Degrees Celsius:')), 
+    }
+    // 2/ Find
+    console.log(measurement);//shows value as a string
+    console.table(measurement);
+    //console.log(measurement.value);
+    //console.warn(measurement.value);
+    //console.error(measurement.value);
+    const kelvin = measurement.value + 273;
+    return kelvin;
+}
+// 1/ Identify the bug
+console.log(measureKelvin());
+
+//Debugging pt2
+const calcTempAmplitudeBug = function (temp) {
+    
+    let max = 0;
+    let min = 0;
+
+    for (let i = 0; i < temp.length; i++) {
+        if (typeof temp[i] !== 'number') continue; 
+//        debugger;
+        if (temp[i] > max) max = temp[i];
+        if (temp[i] < min) min = temp[i];
+    }
+    const amplitude = max-min;
+    console.log(`Maximum temperature = ${max};
+Minimum temperature = ${min};
+Temperature amplitude = ${amplitude};`);
+};
+calcTempAmplitudeBug([3,5,1],[9,4,5]);
