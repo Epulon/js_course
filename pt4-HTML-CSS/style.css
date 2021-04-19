@@ -45,3 +45,11 @@ button {
 a {
   background-color: yellowgreen;
 }
+
+#course-image {
+  width: 300px;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}
