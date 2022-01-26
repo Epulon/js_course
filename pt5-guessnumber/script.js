@@ -25,6 +25,11 @@ let number = Math.trunc(Math.random()*20)+1;
 
 //initial Score value
 let score = 20;
+let highscore = 0;
+
+const displayMessage = function(message) {
+  document.querySelector('.message').textContent = message;
+}
 
 //Checking if the input is correct
 document.querySelector('.check').addEventListener('click', function () {
@@ -35,21 +40,42 @@ document.querySelector('.check').addEventListener('click', function () {
 
   //No input
   if (!guess) {
-    document.querySelector('.message').textContent = 'Please pick a number you eejit!';
+    //document.querySelector('.message').textContent = 'Please pick a number you eejit!';
+    displayMessage('Please pick a number you eejit!');
 
   //Correct number
   } else if (guess === number) {
-    document.querySelector('.message').textContent = 'Gooood joob!';
+    displayMessage('Goooood jooob!');
+    //document.querySelector('.message').textContent = 'Gooood joob!';
     document.querySelector('body').style.backgroundColor = '#00ff00';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = number;
     score--;
     document.querySelector('.score').textContent = score;
-
-  //If guess is too high
-  } else if (guess > number) {
+    if (score > highscore) {
+      highscore = score
+      document.querySelector('.highscore').textContent = highscore;
+    }
+    //Number NOT correct
+  } else if (guess !== number) {
     if (score > 1) {
-    document.querySelector('.message').textContent = 'You must be high!'
+      displayMessage(guess > number ? 'You must be high!' : 'You need to get high');
+      //document.querySelector('.message').textContent = guess > number ? 'You must be high!' : 'You need to get high';
+    score--;
+    document.querySelector('.score').textContent = score;
+    } else {
+      displayMessage('You suck!');
+      //document.querySelector('.message').textContent = 'You suck!';
+      score--;
+      document.querySelector('.score').textContent = score;
+      document.querySelector('body').style.backgroundColor = '#800000';
+    }
+  }
+  /*
+  //If guess is too high
+    else if (guess > number) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = 'You must be high!'
     score--;
     document.querySelector('.score').textContent = score;
     } else {
@@ -72,6 +98,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#800000';
   }
   }
+  */
 });
 
 /*
@@ -84,7 +111,8 @@ document.querySelector('.again').addEventListener('click', function() {
 //Game Reset - course
 document.querySelector('.again').addEventListener('click', function() {
   number = Math.trunc(Math.random()*20)+1;
-  document.querySelector('.message').textContent = 'Start guessing...';
+  displayMessage('Start guessing...');
+  //document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
